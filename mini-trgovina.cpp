@@ -125,7 +125,7 @@ int main()
             {
                 if(barkod_pretraga == barkod[i])
                 {
-                    cout << "unesite novu cijenu; "
+                    cout << "unesite novu cijenu; ";
                     cin >> cijena[i];
                     datotekaUpisivanje.open("artikli.txt", ios::app);
             datotekaUpisivanje << barkod [brojArtikla]<<endl;
@@ -142,15 +142,19 @@ int main()
         }
         else if( izbor == 6 )
         {
+            int max = artikli [0];
+       for ( int i =0; i < brojArtikla; i++)
+       {
+           if ( artikli [i]> max)
+           {
+               max = artikli [i];
+           }
+       }
         }
         else if( izbor == 7 )
         {
             cout << "Kraj rada" << endl;
             break;
-        }
-        else
-        {
-            cout << "Unijeli ste krivi broj." << endl;
         }
         cout << endl;
     }
