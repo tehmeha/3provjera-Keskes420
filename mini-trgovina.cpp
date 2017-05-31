@@ -27,21 +27,23 @@ int main()
         cin >> izbor;
         if( izbor == 1 )
         {
-            cout << "unesite bar kod artikla";
+            cout << "unesite bar kod artikla: ";
             cin >> barkod [brojArtikla];
             cout << "Unesite naziv artikla: ";
             cin.ignore();
             getline (cin, artikli[brojArtikla]);
-            cout << "Unesite cijenu artikla";
+            cout << "Unesite cijenu artikla: ";
             cin >> cijena [brojArtikla];
             brojArtikla++;
         }
         else if( izbor == 2 )
         {
-            cout << "bar kod" << "\t" << "naziv artikla" << "\t" << "cijena" << endl;
+            cout << "bar kod: "<< "\t" << "naziv artikla; "  << "\t" << "cijena"  << endl;
             for( int i = 0; i < brojArtikla; i++ )
             {
-                cout << artikli[i] << endl;
+                cout << artikli[i] <<  "\t";
+                cout << barkod[i] << "\t";
+                cout << cijena[i] << endl;
             }
         }
         else if( izbor == 3 )
