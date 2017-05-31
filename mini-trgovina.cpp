@@ -36,7 +36,14 @@ int main()
             getline (cin, artikli[brojArtikla]);
             cout << "Unesite cijenu artikla: ";
             cin >> cijena [brojArtikla];
+            datotekaUpisivanje.open("artikli.txt", ios::app);
+            datotekaUpisivanje << barkod [brojArtikla]<<endl;
+             datotekaUpisivanje<< artikli[brojArtikla]<<endl;
+             datotekaUpisivanje<< cijena [brojArtikla] << endl;
+             datotekaUpisivanje.close();
+
             brojArtikla++;
+
         }
         else if( izbor == 2 )
         {
@@ -78,11 +85,12 @@ int main()
             bool pronadjen = false;
             for(int i = 0; i< brojArtikla; i++)
             {
+
                 if(naziv == artikli[i])
                 {
                     cout << artikli[i] <<  "\t";
                 cout << barkod[i] << "\t";
-                cout << cijena[i] << endl;
+                cout << cijena[i] << "\t";
                     pronadjen=true;
                     break;
 
@@ -96,6 +104,8 @@ int main()
         }
         else if( izbor == 5 )
         {
+
+
         }
         else if( izbor == 6 )
         {
