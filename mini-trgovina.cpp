@@ -127,10 +127,16 @@ int main()
                 {
                     cout << "unesite novu cijenu; "
                     cin >> cijena[i];
+                    datotekaUpisivanje.open("artikli.txt", ios::app);
+            datotekaUpisivanje << barkod [brojArtikla]<<endl;
+             datotekaUpisivanje<< artikli[brojArtikla]<<endl;
+             datotekaUpisivanje<< cijena [brojArtikla] << endl;
+             datotekaUpisivanje.close();
 
                     break;
 
                 }
+
             }
 
         }
