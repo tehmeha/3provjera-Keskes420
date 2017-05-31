@@ -125,14 +125,11 @@ int main()
             {
                 if(barkod_pretraga == barkod[i])
                 {
+                    cout << "unesite novu cijenu; "
+                    cin >> cijena[i];
 
-                    pronadjen=true;
                     break;
 
-                }
-                if(pronadjen == false)
-                {
-                    cout << "unijeli ste krivi barkod:";
                 }
             }
 
