@@ -14,6 +14,20 @@ int main()
     float cijena [MAX];
     ofstream datotekaUpisivanje;
     ifstream datotekaUcitavanje;
+    datotekaUcitavanje.open("artikli.txt");
+    while(1)
+    {
+        datotekaUcitavanje>> barkod[brojArtikla];
+        if (datotekaUcitavanje.eof() ==true)
+        {
+            break;
+            datotekaUcitavanje.ignore();
+            getline(datotekaUcitavanje, artikli[brojArtikla]);
+            datotekaUcitavanje >> cijena[brojArtikla];
+            brojArtikla++;
+        }
+    }
+    datotekaUcitavanje.close();
 
     while(1)
     {
@@ -104,7 +118,23 @@ int main()
         }
         else if( izbor == 5 )
         {
+            cout << " upisite barkod; ";
+            cin >> barkod_pretraga;
+            bool pronadjen = false;
+            for(int i = 0; i< brojArtikla; i++)
+            {
+                if(barkod_pretraga == barkod[i])
+                {
 
+                    pronadjen=true;
+                    break;
+
+                }
+                if(pronadjen == false)
+                {
+                    cout << "unijeli ste krivi barkod:";
+                }
+            }
 
         }
         else if( izbor == 6 )
