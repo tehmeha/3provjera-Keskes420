@@ -140,18 +140,8 @@ int main()
             }
 
         }
-        else if( izbor == 6 )
-        {
-            int max = artikli [0];
-       for ( int i =0; i < brojArtikla; i++)
-       {
-           if ( artikli [i]> max)
-           {
-               max = artikli [i];
-           }
-       }
-        }
-        else if( izbor == 7 )
+
+            else if( izbor == 7 )
         {
             cout << "Kraj rada" << endl;
             break;
